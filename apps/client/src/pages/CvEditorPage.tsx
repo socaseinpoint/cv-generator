@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Save, ArrowLeft, Download } from 'lucide-react';
-import { cvApi, StyleType } from '../api/client';
+import { cvApi } from '../api/client';
 import { useUiStore } from '../store/ui-store';
 import MarkdownPreview from '../components/MarkdownPreview';
 import StyleSelector from '../components/StyleSelector';
