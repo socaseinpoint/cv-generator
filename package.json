@@ -1,0 +1,38 @@
+{
+  "name": "cv-editor-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CV Editor with React and Fastify",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:api": "turbo run dev --filter=api",
+    "dev:client": "turbo run dev --filter=client",
+    "dev:full": "turbo run dev --parallel --filter=api --filter=client",
+    "build": "turbo run build",
+    "build:client": "turbo run build --filter=client",
+    "db:generate": "cd apps/api && pnpm prisma generate",
+    "db:migrate": "cd apps/api && pnpm prisma migrate dev",
+    "db:push": "cd apps/api && pnpm prisma db push",
+    "db:studio": "cd apps/api && pnpm prisma studio",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.0.0",
+    "turbo": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}
+
+
+
+
+
