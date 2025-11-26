@@ -95,7 +95,7 @@ export async function generatePDF(markdown: string, style: StyleType): Promise<B
   }
 
   const browser = await puppeteer.launch({ 
-    headless: 'new',
+    headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   
@@ -112,7 +112,7 @@ export async function generatePDF(markdown: string, style: StyleType): Promise<B
     });
     
     await page.close();
-    return pdf;
+    return Buffer.from(pdf);
   } finally {
     await browser.close();
   }
